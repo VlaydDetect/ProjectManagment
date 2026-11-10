@@ -1,0 +1,849 @@
+{
+  "metadata": {
+    "status": "ДАННЫЕ ИЗ ПОДТВЕРЖДЁННЫХ АНКЕТ",
+    "source": "Задание фаз 2 и 3 + phase-01 CampusEvents UC01–UC12",
+    "generated": "2026-11-10",
+    "survey_info": [
+      {
+        "name": "Хитров Владислав Витальевич",
+        "date": "46335.0",
+        "status": "ПОДТВЕРЖДЕНО",
+        "file": "expert-1.xlsx"
+      },
+      {
+        "name": "Лошаков Максим Алексеевич",
+        "date": "46335.0",
+        "status": "ПОДТВЕРЖДЕНО",
+        "file": "expert-2.xlsx"
+      },
+      {
+        "name": "Деев Александр Сергеевич",
+        "date": "46335.0",
+        "status": "ПОДТВЕРЖДЕНО",
+        "file": "expert-3.xlsx"
+      }
+    ]
+  },
+  "team": [
+    {
+      "id": "У1",
+      "assumed_competencies": [
+        "product",
+        "uc",
+        "report",
+        "qa",
+        "experts",
+        "statistics",
+        "methods"
+      ]
+    },
+    {
+      "id": "У2",
+      "assumed_competencies": [
+        "cosmic",
+        "ucp",
+        "uc",
+        "qa",
+        "methods",
+        "statistics",
+        "experts"
+      ]
+    },
+    {
+      "id": "У3",
+      "assumed_competencies": [
+        "ucp",
+        "cosmic",
+        "uc",
+        "qa",
+        "methods",
+        "statistics",
+        "experts",
+        "report"
+      ]
+    }
+  ],
+  "parameters": {
+    "hours_capacity_per_person": 24.5,
+    "minimum_hours_per_person": 18.0,
+    "max_tasks_per_person": 13,
+    "min_tasks_per_person": 5,
+    "fairness_weight_lambda": 1.5
+  },
+  "tasks": [
+    {
+      "id": "T28",
+      "name": "Утвердить границы CampusEvents и стартовый перечень 12 UC",
+      "stage": "База",
+      "deliverable": "UC v0.1, роли, граница MVP",
+      "dependencies": [],
+      "base_lead_hours": 1.5,
+      "shared_hours_per_person": 0.5,
+      "eligibility": "all",
+      "group": "product",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T29",
+      "name": "Изучить COSMIC/UCP, согласовать правила подсчёта",
+      "stage": "Методы",
+      "deliverable": "Согласованные инструкции, шаблоны",
+      "dependencies": [
+        "T28"
+      ],
+      "base_lead_hours": 2.0,
+      "shared_hours_per_person": 0,
+      "eligibility": "all",
+      "group": "methods",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T30",
+      "name": "Детализировать UC01–UC04: основные, альтернативные, ошибочные потоки",
+      "stage": "Use Cases",
+      "deliverable": "4 спецификации UC01–UC04",
+      "dependencies": [
+        "T28"
+      ],
+      "base_lead_hours": 3.5,
+      "shared_hours_per_person": 0,
+      "eligibility": "all",
+      "group": "uc",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T31",
+      "name": "Детализировать UC05–UC08: основные, альтернативные, ошибочные потоки",
+      "stage": "Use Cases",
+      "deliverable": "4 спецификации UC05–UC08",
+      "dependencies": [
+        "T28"
+      ],
+      "base_lead_hours": 3.5,
+      "shared_hours_per_person": 0,
+      "eligibility": "all",
+      "group": "uc",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T32",
+      "name": "Детализировать UC09–UC12: основные, альтернативные, ошибочные потоки",
+      "stage": "Use Cases",
+      "deliverable": "4 спецификации UC09–UC12",
+      "dependencies": [
+        "T28"
+      ],
+      "base_lead_hours": 3.5,
+      "shared_hours_per_person": 0,
+      "eligibility": "all",
+      "group": "uc",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T33",
+      "name": "Сквозная проверка UC: роли, предусловия, альтернативы и ошибки",
+      "stage": "Use Cases",
+      "deliverable": "Чек-лист LLM и трассировка 12 UC",
+      "dependencies": [
+        "T30",
+        "T31",
+        "T32"
+      ],
+      "base_lead_hours": 2.0,
+      "shared_hours_per_person": 0.5,
+      "eligibility": "all",
+      "group": "qa",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T34",
+      "name": "COSMIC: определить границы приложения и functional users",
+      "stage": "COSMIC",
+      "deliverable": "Схема границ и список функциональных пользователей",
+      "dependencies": [
+        "T29",
+        "T33"
+      ],
+      "base_lead_hours": 2.0,
+      "shared_hours_per_person": 0,
+      "eligibility": "cosmic",
+      "group": "cosmic",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T35",
+      "name": "COSMIC: выделить функциональные процессы и группы данных",
+      "stage": "COSMIC",
+      "deliverable": "Реестр процессов и групп данных",
+      "dependencies": [
+        "T34"
+      ],
+      "base_lead_hours": 2.5,
+      "shared_hours_per_person": 0,
+      "eligibility": "cosmic",
+      "group": "cosmic",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T36",
+      "name": "COSMIC: посчитать движения E/X/R/W по UC01–UC06",
+      "stage": "COSMIC",
+      "deliverable": "Реестр движений для 6 UC",
+      "dependencies": [
+        "T35"
+      ],
+      "base_lead_hours": 3.0,
+      "shared_hours_per_person": 0,
+      "eligibility": "cosmic",
+      "group": "cosmic",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T37",
+      "name": "COSMIC: посчитать движения E/X/R/W по UC07–UC12",
+      "stage": "COSMIC",
+      "deliverable": "Реестр движений для 6 UC",
+      "dependencies": [
+        "T35"
+      ],
+      "base_lead_hours": 3.0,
+      "shared_hours_per_person": 0,
+      "eligibility": "cosmic",
+      "group": "cosmic",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T38",
+      "name": "COSMIC: проверить дубли и агрегировать CFP",
+      "stage": "COSMIC",
+      "deliverable": "Итоговый CFP и аудит правил подсчёта",
+      "dependencies": [
+        "T36",
+        "T37"
+      ],
+      "base_lead_hours": 2.0,
+      "shared_hours_per_person": 0,
+      "eligibility": "cosmic",
+      "group": "cosmic",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T39",
+      "name": "UCP: классифицировать акторов и Use Cases, вычислить UUCP",
+      "stage": "UCP",
+      "deliverable": "UAW, UUCW, UUCP с обоснованиями",
+      "dependencies": [
+        "T29",
+        "T33"
+      ],
+      "base_lead_hours": 2.0,
+      "shared_hours_per_person": 0,
+      "eligibility": "ucp",
+      "group": "ucp",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T40",
+      "name": "UCP: оценить технические и средовые факторы TCF/ECF",
+      "stage": "UCP",
+      "deliverable": "Таблицы факторов TCF и ECF",
+      "dependencies": [
+        "T39"
+      ],
+      "base_lead_hours": 2.0,
+      "shared_hours_per_person": 0,
+      "eligibility": "ucp",
+      "group": "ucp",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T41",
+      "name": "UCP: рассчитать UCP и трудозатраты при разных PF",
+      "stage": "UCP",
+      "deliverable": "UCP и сценарии производительности (ч/ UCP)",
+      "dependencies": [
+        "T40"
+      ],
+      "base_lead_hours": 1.5,
+      "shared_hours_per_person": 0,
+      "eligibility": "ucp",
+      "group": "ucp",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T42",
+      "name": "Подготовить методику коллективных экспертных оценок UC",
+      "stage": "Эксперты",
+      "deliverable": "Покер/Делфи, шкалы, форма для 12 UC",
+      "dependencies": [
+        "T29",
+        "T33"
+      ],
+      "base_lead_hours": 2.0,
+      "shared_hours_per_person": 0,
+      "eligibility": "all",
+      "group": "experts",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T43",
+      "name": "Собрать независимые оценки реализации UC01–UC04",
+      "stage": "Эксперты",
+      "deliverable": "3 мнения по каждому UC01–UC04",
+      "dependencies": [
+        "T42"
+      ],
+      "base_lead_hours": 2.0,
+      "shared_hours_per_person": 0.25,
+      "eligibility": "all",
+      "group": "experts",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T44",
+      "name": "Собрать независимые оценки реализации UC05–UC08",
+      "stage": "Эксперты",
+      "deliverable": "3 мнения по каждому UC05–UC08",
+      "dependencies": [
+        "T42"
+      ],
+      "base_lead_hours": 2.0,
+      "shared_hours_per_person": 0.25,
+      "eligibility": "all",
+      "group": "experts",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T45",
+      "name": "Собрать независимые оценки реализации UC09–UC12",
+      "stage": "Эксперты",
+      "deliverable": "3 мнения по каждому UC09–UC12",
+      "dependencies": [
+        "T42"
+      ],
+      "base_lead_hours": 2.0,
+      "shared_hours_per_person": 0.25,
+      "eligibility": "all",
+      "group": "experts",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T46",
+      "name": "Провести согласование оценок 12 UC, зафиксировать консенсус",
+      "stage": "Эксперты",
+      "deliverable": "Протокол расхождений, 12 согласованных оценок",
+      "dependencies": [
+        "T43",
+        "T44",
+        "T45"
+      ],
+      "base_lead_hours": 1.0,
+      "shared_hours_per_person": 1.0,
+      "eligibility": "all",
+      "group": "experts",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T47",
+      "name": "Агрегировать согласованные оценки UC в общую оценку",
+      "stage": "Эксперты",
+      "deliverable": "Сводная трудоёмкость и допущения",
+      "dependencies": [
+        "T46"
+      ],
+      "base_lead_hours": 1.5,
+      "shared_hours_per_person": 0,
+      "eligibility": "all",
+      "group": "statistics",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T48",
+      "name": "Сопоставить COSMIC, UCP и экспертный подход",
+      "stage": "Анализ",
+      "deliverable": "Таблица результатов, причины различий",
+      "dependencies": [
+        "T38",
+        "T41",
+        "T47"
+      ],
+      "base_lead_hours": 2.0,
+      "shared_hours_per_person": 0,
+      "eligibility": "all",
+      "group": "statistics",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T49",
+      "name": "Оценить состав команды, компетенции и календарную длительность",
+      "stage": "Анализ",
+      "deliverable": "Сценарии состава, ставок и срока реализации",
+      "dependencies": [
+        "T48"
+      ],
+      "base_lead_hours": 2.5,
+      "shared_hours_per_person": 0,
+      "eligibility": "all",
+      "group": "product",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T50",
+      "name": "Проанализировать исключение необязательных фич из MVP",
+      "stage": "Анализ",
+      "deliverable": "Приоритеты исключения UC, экономия усилий",
+      "dependencies": [
+        "T48"
+      ],
+      "base_lead_hours": 1.5,
+      "shared_hours_per_person": 0,
+      "eligibility": "all",
+      "group": "product",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T51",
+      "name": "Проверить чувствительность и допущения оценки",
+      "stage": "Анализ",
+      "deliverable": "Риски, вилки, сценарии",
+      "dependencies": [
+        "T48"
+      ],
+      "base_lead_hours": 1.5,
+      "shared_hours_per_person": 0,
+      "eligibility": "all",
+      "group": "statistics",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T52",
+      "name": "Собрать отчёт фазы 3 и графики",
+      "stage": "Отчёт",
+      "deliverable": "Единый отчёт с приложениями",
+      "dependencies": [
+        "T49",
+        "T50",
+        "T51"
+      ],
+      "base_lead_hours": 3.0,
+      "shared_hours_per_person": 0,
+      "eligibility": "all",
+      "group": "report",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    },
+    {
+      "id": "T53",
+      "name": "Взаимная проверка, защита, закрытие фазы и RACI",
+      "stage": "Отчёт",
+      "deliverable": "Проверенный отчёт, протокол закрытия, учёт часов",
+      "dependencies": [
+        "T52"
+      ],
+      "base_lead_hours": 2.0,
+      "shared_hours_per_person": 0.5,
+      "eligibility": "all",
+      "group": "qa",
+      "lead_definition": "Часы владельца на подготовку/координацию; участие экспертов отдельно в shared_hours_per_person"
+    }
+  ],
+  "individual_lead_hours": [
+    [
+      1.0,
+      1.5,
+      2.0
+    ],
+    [
+      2.0,
+      2.5,
+      1.5
+    ],
+    [
+      4.0,
+      3.0,
+      3.5
+    ],
+    [
+      3.0,
+      3.5,
+      4.0
+    ],
+    [
+      3.5,
+      4.5,
+      2.5
+    ],
+    [
+      2.5,
+      1.5,
+      2.0
+    ],
+    [
+      1.5,
+      2.0,
+      2.5
+    ],
+    [
+      2.5,
+      3.5,
+      1.5
+    ],
+    [
+      3.5,
+      2.5,
+      3.0
+    ],
+    [
+      2.5,
+      3.0,
+      3.5
+    ],
+    [
+      2.0,
+      2.5,
+      1.5
+    ],
+    [
+      2.5,
+      1.5,
+      2.0
+    ],
+    [
+      1.5,
+      2.0,
+      2.5
+    ],
+    [
+      1.5,
+      2.0,
+      1.0
+    ],
+    [
+      2.5,
+      1.5,
+      2.0
+    ],
+    [
+      1.5,
+      2.0,
+      2.5
+    ],
+    [
+      2.0,
+      2.5,
+      1.5
+    ],
+    [
+      2.5,
+      1.5,
+      2.0
+    ],
+    [
+      0.5,
+      1.0,
+      1.5
+    ],
+    [
+      1.5,
+      2.0,
+      1.0
+    ],
+    [
+      2.5,
+      1.5,
+      2.0
+    ],
+    [
+      2.0,
+      2.5,
+      3.0
+    ],
+    [
+      1.5,
+      2.0,
+      1.0
+    ],
+    [
+      2.0,
+      1.0,
+      1.5
+    ],
+    [
+      2.5,
+      3.0,
+      3.5
+    ],
+    [
+      2.0,
+      2.5,
+      1.5
+    ]
+  ],
+  "individual_preferences": [
+    [
+      8,
+      5,
+      6
+    ],
+    [
+      6,
+      9,
+      8
+    ],
+    [
+      9,
+      7,
+      8
+    ],
+    [
+      8,
+      5,
+      6
+    ],
+    [
+      9,
+      6,
+      7
+    ],
+    [
+      8,
+      9,
+      9
+    ],
+    [
+      2,
+      8,
+      6
+    ],
+    [
+      3,
+      9,
+      7
+    ],
+    [
+      4,
+      9,
+      8
+    ],
+    [
+      2,
+      8,
+      6
+    ],
+    [
+      3,
+      9,
+      7
+    ],
+    [
+      5,
+      8,
+      9
+    ],
+    [
+      3,
+      6,
+      8
+    ],
+    [
+      4,
+      7,
+      9
+    ],
+    [
+      8,
+      7,
+      9
+    ],
+    [
+      6,
+      5,
+      8
+    ],
+    [
+      7,
+      6,
+      9
+    ],
+    [
+      8,
+      7,
+      9
+    ],
+    [
+      8,
+      7,
+      9
+    ],
+    [
+      6,
+      9,
+      8
+    ],
+    [
+      7,
+      9,
+      9
+    ],
+    [
+      8,
+      5,
+      6
+    ],
+    [
+      9,
+      6,
+      7
+    ],
+    [
+      7,
+      9,
+      9
+    ],
+    [
+      8,
+      5,
+      6
+    ],
+    [
+      8,
+      7,
+      8
+    ]
+  ],
+  "eligible": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "aggregation": {
+    "effort": "median of three experts (lead hours)",
+    "preferences": "individual score 1..9, not aggregated in optimization"
+  }
+}

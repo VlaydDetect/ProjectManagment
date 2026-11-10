@@ -1,0 +1,407 @@
+{
+  "status": "OPTIMAL",
+  "solver": "SciPy scipy.optimize.milp / HiGHS",
+  "solver_status": 0,
+  "mip_gap": 0.0,
+  "objective": 36.3125,
+  "dissatisfaction_hour_equivalents": 2.9375,
+  "fairness_weight_lambda": 1.5,
+  "max_load_hours": 22.25,
+  "capacity_hours_per_person": 24.5,
+  "min_hours_per_person": 18.0,
+  "shared_hours_each_expert": 3.25,
+  "lead_hours_sum": 57.0,
+  "all_person_hours": 66.75,
+  "person_load_hours": {
+    "У1": 22.25,
+    "У2": 22.25,
+    "У3": 22.25
+  },
+  "lead_hours": {
+    "У1": 19.0,
+    "У2": 19.0,
+    "У3": 19.0
+  },
+  "task_count": {
+    "У1": 7,
+    "У2": 9,
+    "У3": 10
+  },
+  "weighted_mean_owner_preference": 8.587719298245615,
+  "assignments": [
+    {
+      "task_id": "T28",
+      "stage": "База",
+      "task": "Утвердить границы CampusEvents и стартовый перечень 12 UC",
+      "owner": "У1",
+      "lead_hours": 1.5,
+      "preference": 8,
+      "shared_hours_each": 0.5,
+      "cost": 0.1875,
+      "dependencies": [],
+      "deliverable": "UC v0.1, роли, граница MVP"
+    },
+    {
+      "task_id": "T29",
+      "stage": "Методы",
+      "task": "Изучить COSMIC/UCP, согласовать правила подсчёта",
+      "owner": "У2",
+      "lead_hours": 2.0,
+      "preference": 9,
+      "shared_hours_each": 0.0,
+      "cost": 0.0,
+      "dependencies": [
+        "T28"
+      ],
+      "deliverable": "Согласованные инструкции, шаблоны"
+    },
+    {
+      "task_id": "T30",
+      "stage": "Use Cases",
+      "task": "Детализировать UC01–UC04: основные, альтернативные, ошибочные потоки",
+      "owner": "У1",
+      "lead_hours": 3.5,
+      "preference": 9,
+      "shared_hours_each": 0.0,
+      "cost": 0.0,
+      "dependencies": [
+        "T28"
+      ],
+      "deliverable": "4 спецификации UC01–UC04"
+    },
+    {
+      "task_id": "T31",
+      "stage": "Use Cases",
+      "task": "Детализировать UC05–UC08: основные, альтернативные, ошибочные потоки",
+      "owner": "У1",
+      "lead_hours": 3.5,
+      "preference": 8,
+      "shared_hours_each": 0.0,
+      "cost": 0.4375,
+      "dependencies": [
+        "T28"
+      ],
+      "deliverable": "4 спецификации UC05–UC08"
+    },
+    {
+      "task_id": "T32",
+      "stage": "Use Cases",
+      "task": "Детализировать UC09–UC12: основные, альтернативные, ошибочные потоки",
+      "owner": "У1",
+      "lead_hours": 3.5,
+      "preference": 9,
+      "shared_hours_each": 0.0,
+      "cost": 0.0,
+      "dependencies": [
+        "T28"
+      ],
+      "deliverable": "4 спецификации UC09–UC12"
+    },
+    {
+      "task_id": "T33",
+      "stage": "Use Cases",
+      "task": "Сквозная проверка UC: роли, предусловия, альтернативы и ошибки",
+      "owner": "У2",
+      "lead_hours": 2.0,
+      "preference": 9,
+      "shared_hours_each": 0.5,
+      "cost": 0.0,
+      "dependencies": [
+        "T30",
+        "T31",
+        "T32"
+      ],
+      "deliverable": "Чек-лист LLM и трассировка 12 UC"
+    },
+    {
+      "task_id": "T34",
+      "stage": "COSMIC",
+      "task": "COSMIC: определить границы приложения и functional users",
+      "owner": "У2",
+      "lead_hours": 2.0,
+      "preference": 8,
+      "shared_hours_each": 0.0,
+      "cost": 0.25,
+      "dependencies": [
+        "T29",
+        "T33"
+      ],
+      "deliverable": "Схема границ и список функциональных пользователей"
+    },
+    {
+      "task_id": "T35",
+      "stage": "COSMIC",
+      "task": "COSMIC: выделить функциональные процессы и группы данных",
+      "owner": "У2",
+      "lead_hours": 2.5,
+      "preference": 9,
+      "shared_hours_each": 0.0,
+      "cost": 0.0,
+      "dependencies": [
+        "T34"
+      ],
+      "deliverable": "Реестр процессов и групп данных"
+    },
+    {
+      "task_id": "T36",
+      "stage": "COSMIC",
+      "task": "COSMIC: посчитать движения E/X/R/W по UC01–UC06",
+      "owner": "У2",
+      "lead_hours": 3.0,
+      "preference": 9,
+      "shared_hours_each": 0.0,
+      "cost": 0.0,
+      "dependencies": [
+        "T35"
+      ],
+      "deliverable": "Реестр движений для 6 UC"
+    },
+    {
+      "task_id": "T37",
+      "stage": "COSMIC",
+      "task": "COSMIC: посчитать движения E/X/R/W по UC07–UC12",
+      "owner": "У2",
+      "lead_hours": 3.0,
+      "preference": 8,
+      "shared_hours_each": 0.0,
+      "cost": 0.375,
+      "dependencies": [
+        "T35"
+      ],
+      "deliverable": "Реестр движений для 6 UC"
+    },
+    {
+      "task_id": "T38",
+      "stage": "COSMIC",
+      "task": "COSMIC: проверить дубли и агрегировать CFP",
+      "owner": "У2",
+      "lead_hours": 2.0,
+      "preference": 9,
+      "shared_hours_each": 0.0,
+      "cost": 0.0,
+      "dependencies": [
+        "T36",
+        "T37"
+      ],
+      "deliverable": "Итоговый CFP и аудит правил подсчёта"
+    },
+    {
+      "task_id": "T39",
+      "stage": "UCP",
+      "task": "UCP: классифицировать акторов и Use Cases, вычислить UUCP",
+      "owner": "У3",
+      "lead_hours": 2.0,
+      "preference": 9,
+      "shared_hours_each": 0.0,
+      "cost": 0.0,
+      "dependencies": [
+        "T29",
+        "T33"
+      ],
+      "deliverable": "UAW, UUCW, UUCP с обоснованиями"
+    },
+    {
+      "task_id": "T40",
+      "stage": "UCP",
+      "task": "UCP: оценить технические и средовые факторы TCF/ECF",
+      "owner": "У3",
+      "lead_hours": 2.0,
+      "preference": 8,
+      "shared_hours_each": 0.0,
+      "cost": 0.25,
+      "dependencies": [
+        "T39"
+      ],
+      "deliverable": "Таблицы факторов TCF и ECF"
+    },
+    {
+      "task_id": "T41",
+      "stage": "UCP",
+      "task": "UCP: рассчитать UCP и трудозатраты при разных PF",
+      "owner": "У3",
+      "lead_hours": 1.5,
+      "preference": 9,
+      "shared_hours_each": 0.0,
+      "cost": 0.0,
+      "dependencies": [
+        "T40"
+      ],
+      "deliverable": "UCP и сценарии производительности (ч/ UCP)"
+    },
+    {
+      "task_id": "T42",
+      "stage": "Эксперты",
+      "task": "Подготовить методику коллективных экспертных оценок UC",
+      "owner": "У3",
+      "lead_hours": 2.0,
+      "preference": 9,
+      "shared_hours_each": 0.0,
+      "cost": 0.0,
+      "dependencies": [
+        "T29",
+        "T33"
+      ],
+      "deliverable": "Покер/Делфи, шкалы, форма для 12 UC"
+    },
+    {
+      "task_id": "T43",
+      "stage": "Эксперты",
+      "task": "Собрать независимые оценки реализации UC01–UC04",
+      "owner": "У3",
+      "lead_hours": 2.0,
+      "preference": 8,
+      "shared_hours_each": 0.25,
+      "cost": 0.25,
+      "dependencies": [
+        "T42"
+      ],
+      "deliverable": "3 мнения по каждому UC01–UC04"
+    },
+    {
+      "task_id": "T44",
+      "stage": "Эксперты",
+      "task": "Собрать независимые оценки реализации UC05–UC08",
+      "owner": "У3",
+      "lead_hours": 2.0,
+      "preference": 9,
+      "shared_hours_each": 0.25,
+      "cost": 0.0,
+      "dependencies": [
+        "T42"
+      ],
+      "deliverable": "3 мнения по каждому UC05–UC08"
+    },
+    {
+      "task_id": "T45",
+      "stage": "Эксперты",
+      "task": "Собрать независимые оценки реализации UC09–UC12",
+      "owner": "У3",
+      "lead_hours": 2.0,
+      "preference": 9,
+      "shared_hours_each": 0.25,
+      "cost": 0.0,
+      "dependencies": [
+        "T42"
+      ],
+      "deliverable": "3 мнения по каждому UC09–UC12"
+    },
+    {
+      "task_id": "T46",
+      "stage": "Эксперты",
+      "task": "Провести согласование оценок 12 UC, зафиксировать консенсус",
+      "owner": "У2",
+      "lead_hours": 1.0,
+      "preference": 7,
+      "shared_hours_each": 1.0,
+      "cost": 0.25,
+      "dependencies": [
+        "T43",
+        "T44",
+        "T45"
+      ],
+      "deliverable": "Протокол расхождений, 12 согласованных оценок"
+    },
+    {
+      "task_id": "T47",
+      "stage": "Эксперты",
+      "task": "Агрегировать согласованные оценки UC в общую оценку",
+      "owner": "У2",
+      "lead_hours": 1.5,
+      "preference": 9,
+      "shared_hours_each": 0.0,
+      "cost": 0.0,
+      "dependencies": [
+        "T46"
+      ],
+      "deliverable": "Сводная трудоёмкость и допущения"
+    },
+    {
+      "task_id": "T48",
+      "stage": "Анализ",
+      "task": "Сопоставить COSMIC, UCP и экспертный подход",
+      "owner": "У3",
+      "lead_hours": 2.0,
+      "preference": 9,
+      "shared_hours_each": 0.0,
+      "cost": 0.0,
+      "dependencies": [
+        "T38",
+        "T41",
+        "T47"
+      ],
+      "deliverable": "Таблица результатов, причины различий"
+    },
+    {
+      "task_id": "T49",
+      "stage": "Анализ",
+      "task": "Оценить состав команды, компетенции и календарную длительность",
+      "owner": "У1",
+      "lead_hours": 2.5,
+      "preference": 8,
+      "shared_hours_each": 0.0,
+      "cost": 0.3125,
+      "dependencies": [
+        "T48"
+      ],
+      "deliverable": "Сценарии состава, ставок и срока реализации"
+    },
+    {
+      "task_id": "T50",
+      "stage": "Анализ",
+      "task": "Проанализировать исключение необязательных фич из MVP",
+      "owner": "У1",
+      "lead_hours": 1.5,
+      "preference": 9,
+      "shared_hours_each": 0.0,
+      "cost": 0.0,
+      "dependencies": [
+        "T48"
+      ],
+      "deliverable": "Приоритеты исключения UC, экономия усилий"
+    },
+    {
+      "task_id": "T51",
+      "stage": "Анализ",
+      "task": "Проверить чувствительность и допущения оценки",
+      "owner": "У3",
+      "lead_hours": 1.5,
+      "preference": 9,
+      "shared_hours_each": 0.0,
+      "cost": 0.0,
+      "dependencies": [
+        "T48"
+      ],
+      "deliverable": "Риски, вилки, сценарии"
+    },
+    {
+      "task_id": "T52",
+      "stage": "Отчёт",
+      "task": "Собрать отчёт фазы 3 и графики",
+      "owner": "У1",
+      "lead_hours": 3.0,
+      "preference": 8,
+      "shared_hours_each": 0.0,
+      "cost": 0.375,
+      "dependencies": [
+        "T49",
+        "T50",
+        "T51"
+      ],
+      "deliverable": "Единый отчёт с приложениями"
+    },
+    {
+      "task_id": "T53",
+      "stage": "Отчёт",
+      "task": "Взаимная проверка, защита, закрытие фазы и RACI",
+      "owner": "У3",
+      "lead_hours": 2.0,
+      "preference": 8,
+      "shared_hours_each": 0.5,
+      "cost": 0.25,
+      "dependencies": [
+        "T52"
+      ],
+      "deliverable": "Проверенный отчёт, протокол закрытия, учёт часов"
+    }
+  ]
+}
