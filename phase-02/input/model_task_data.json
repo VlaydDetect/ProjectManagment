@@ -1,0 +1,645 @@
+{
+  "status": "DEMONSTRATION_NOT_REAL_EXPERT_SURVEY",
+  "tasks": [
+    {
+      "id": "T28",
+      "title": "Старт, согласование границ оценки",
+      "kind": "Общее",
+      "group": "Постановка",
+      "lead_preference": null,
+      "estimates": [
+        1,
+        1,
+        1
+      ],
+      "preferences": [
+        3,
+        3,
+        3
+      ],
+      "deliverable": "Встреча с протоколом",
+      "depends": "T16-T27"
+    },
+    {
+      "id": "T29",
+      "title": "Сценарии UC01–UC04: основной/альтернативный/ошибка",
+      "kind": "Индивидуальное",
+      "group": "UC",
+      "lead_preference": 2,
+      "estimates": [
+        3,
+        4,
+        4
+      ],
+      "preferences": [
+        5,
+        3,
+        4
+      ],
+      "deliverable": "Детализированные сценарии",
+      "depends": "T28"
+    },
+    {
+      "id": "T30",
+      "title": "Сценарии UC05–UC08: основной/альтернативный/ошибка",
+      "kind": "Индивидуальное",
+      "group": "UC",
+      "lead_preference": 3,
+      "estimates": [
+        4,
+        5,
+        5
+      ],
+      "preferences": [
+        4,
+        4,
+        5
+      ],
+      "deliverable": "Детализированные сценарии",
+      "depends": "T28"
+    },
+    {
+      "id": "T31",
+      "title": "Сценарии UC09–UC12: основной/альтернативный/ошибка",
+      "kind": "Индивидуальное",
+      "group": "UC",
+      "lead_preference": 1,
+      "estimates": [
+        3,
+        4,
+        4
+      ],
+      "preferences": [
+        5,
+        3,
+        4
+      ],
+      "deliverable": "Детализированные сценарии",
+      "depends": "T28"
+    },
+    {
+      "id": "T32",
+      "title": "Согласование границ, ролей, данных и уникальности UC",
+      "kind": "Индивидуальное",
+      "group": "UC",
+      "lead_preference": 1,
+      "estimates": [
+        2,
+        3,
+        3
+      ],
+      "preferences": [
+        5,
+        4,
+        4
+      ],
+      "deliverable": "Карта границ / словарь данных",
+      "depends": "T29,T30,T31"
+    },
+    {
+      "id": "T33",
+      "title": "COSMIC: определить слой, функциональных пользователей и группы",
+      "kind": "Индивидуальное",
+      "group": "COSMIC",
+      "lead_preference": 2,
+      "estimates": [
+        2,
+        3,
+        3
+      ],
+      "preferences": [
+        3,
+        5,
+        4
+      ],
+      "deliverable": "Measurement strategy",
+      "depends": "T32"
+    },
+    {
+      "id": "T34",
+      "title": "COSMIC: E/X/R/W UC01–UC04",
+      "kind": "Индивидуальное",
+      "group": "COSMIC",
+      "lead_preference": 2,
+      "estimates": [
+        2,
+        3,
+        4
+      ],
+      "preferences": [
+        3,
+        5,
+        4
+      ],
+      "deliverable": "Реестр потоков UC01–04",
+      "depends": "T33"
+    },
+    {
+      "id": "T35",
+      "title": "COSMIC: E/X/R/W UC05–UC08",
+      "kind": "Индивидуальное",
+      "group": "COSMIC",
+      "lead_preference": 2,
+      "estimates": [
+        3,
+        4,
+        4
+      ],
+      "preferences": [
+        3,
+        5,
+        4
+      ],
+      "deliverable": "Реестр потоков UC05–08",
+      "depends": "T33"
+    },
+    {
+      "id": "T36",
+      "title": "COSMIC: E/X/R/W UC09–UC12",
+      "kind": "Индивидуальное",
+      "group": "COSMIC",
+      "lead_preference": 2,
+      "estimates": [
+        3,
+        4,
+        4
+      ],
+      "preferences": [
+        3,
+        5,
+        4
+      ],
+      "deliverable": "Реестр потоков UC09–12",
+      "depends": "T33"
+    },
+    {
+      "id": "T37",
+      "title": "Аудит COSMIC: границы и отсутствие двойного счёта",
+      "kind": "Индивидуальное",
+      "group": "COSMIC",
+      "lead_preference": 3,
+      "estimates": [
+        2,
+        3,
+        3
+      ],
+      "preferences": [
+        4,
+        4,
+        5
+      ],
+      "deliverable": "Проверка CFP",
+      "depends": "T34,T35,T36"
+    },
+    {
+      "id": "T38",
+      "title": "UCP: каталог акторов и их классификация",
+      "kind": "Индивидуальное",
+      "group": "UCP",
+      "lead_preference": 3,
+      "estimates": [
+        2,
+        2,
+        3
+      ],
+      "preferences": [
+        4,
+        3,
+        5
+      ],
+      "deliverable": "UAW",
+      "depends": "T32"
+    },
+    {
+      "id": "T39",
+      "title": "UCP: транзакции и веса 12 UC",
+      "kind": "Индивидуальное",
+      "group": "UCP",
+      "lead_preference": 3,
+      "estimates": [
+        3,
+        3,
+        4
+      ],
+      "preferences": [
+        3,
+        4,
+        5
+      ],
+      "deliverable": "UUCW",
+      "depends": "T29,T30,T31"
+    },
+    {
+      "id": "T40",
+      "title": "UCP: оценка 13 технических факторов",
+      "kind": "Индивидуальное",
+      "group": "UCP",
+      "lead_preference": 3,
+      "estimates": [
+        2,
+        2,
+        3
+      ],
+      "preferences": [
+        3,
+        4,
+        5
+      ],
+      "deliverable": "TCF",
+      "depends": "T39"
+    },
+    {
+      "id": "T41",
+      "title": "UCP: оценка 8 факторов среды",
+      "kind": "Индивидуальное",
+      "group": "UCP",
+      "lead_preference": 3,
+      "estimates": [
+        2,
+        2,
+        3
+      ],
+      "preferences": [
+        3,
+        4,
+        5
+      ],
+      "deliverable": "ECF",
+      "depends": "T40"
+    },
+    {
+      "id": "T42",
+      "title": "UCP: расчёт UCP и трудозатрат; чувствительность",
+      "kind": "Индивидуальное",
+      "group": "UCP",
+      "lead_preference": 3,
+      "estimates": [
+        2,
+        3,
+        4
+      ],
+      "preferences": [
+        3,
+        4,
+        5
+      ],
+      "deliverable": "UCP и чел·ч",
+      "depends": "T41"
+    },
+    {
+      "id": "T43",
+      "title": "Методика экспертного оценивания UC и допущения",
+      "kind": "Индивидуальное",
+      "group": "Экспертиза",
+      "lead_preference": 1,
+      "estimates": [
+        2,
+        2,
+        3
+      ],
+      "preferences": [
+        5,
+        4,
+        3
+      ],
+      "deliverable": "Инструкция экспертов",
+      "depends": "T32"
+    },
+    {
+      "id": "T44",
+      "title": "Независимое оценивание трудозатрат UC каждым",
+      "kind": "Общее",
+      "group": "Экспертиза",
+      "lead_preference": null,
+      "estimates": [
+        2,
+        2,
+        2
+      ],
+      "preferences": [
+        5,
+        5,
+        5
+      ],
+      "deliverable": "3 анкеты UC",
+      "depends": "T43"
+    },
+    {
+      "id": "T45",
+      "title": "Общее обсуждение расхождений и проект консенсуса",
+      "kind": "Общее",
+      "group": "Экспертиза",
+      "lead_preference": null,
+      "estimates": [
+        1,
+        1,
+        1
+      ],
+      "preferences": [
+        5,
+        5,
+        5
+      ],
+      "deliverable": "Протокол с согласованием",
+      "depends": "T44"
+    },
+    {
+      "id": "T46",
+      "title": "Агрегация согласованных UC и инфраструктурного резерва",
+      "kind": "Индивидуальное",
+      "group": "Экспертиза",
+      "lead_preference": 1,
+      "estimates": [
+        2,
+        3,
+        3
+      ],
+      "preferences": [
+        5,
+        4,
+        3
+      ],
+      "deliverable": "Экспертная общая оценка",
+      "depends": "T45"
+    },
+    {
+      "id": "T47",
+      "title": "Сопоставление COSMIC, UCP и экспертного подхода",
+      "kind": "Индивидуальное",
+      "group": "Анализ",
+      "lead_preference": 1,
+      "estimates": [
+        3,
+        4,
+        4
+      ],
+      "preferences": [
+        5,
+        4,
+        4
+      ],
+      "deliverable": "Сравнительный анализ",
+      "depends": "T37,T42,T46"
+    },
+    {
+      "id": "T48",
+      "title": "Штатная модель, роли, ёмкость и ориентировочный срок",
+      "kind": "Индивидуальное",
+      "group": "Анализ",
+      "lead_preference": 3,
+      "estimates": [
+        2,
+        3,
+        3
+      ],
+      "preferences": [
+        4,
+        4,
+        5
+      ],
+      "deliverable": "Команда и календарь",
+      "depends": "T47"
+    },
+    {
+      "id": "T49",
+      "title": "Ранжирование функций и сценарий сокращения MVP",
+      "kind": "Индивидуальное",
+      "group": "Анализ",
+      "lead_preference": 2,
+      "estimates": [
+        2,
+        3,
+        3
+      ],
+      "preferences": [
+        4,
+        5,
+        4
+      ],
+      "deliverable": "Приоритеты отсечения",
+      "depends": "T47"
+    },
+    {
+      "id": "T50",
+      "title": "Написание единого отчёта фазы 3",
+      "kind": "Индивидуальное",
+      "group": "Отчёт",
+      "lead_preference": 1,
+      "estimates": [
+        3,
+        5,
+        4
+      ],
+      "preferences": [
+        5,
+        3,
+        4
+      ],
+      "deliverable": "Отчёт",
+      "depends": "T48,T49"
+    },
+    {
+      "id": "T51",
+      "title": "Перекрёстная методическая проверка отчёта и таблиц",
+      "kind": "Индивидуальное",
+      "group": "Отчёт",
+      "lead_preference": 3,
+      "estimates": [
+        2,
+        3,
+        3
+      ],
+      "preferences": [
+        4,
+        4,
+        5
+      ],
+      "deliverable": "Протокол QA",
+      "depends": "T50"
+    },
+    {
+      "id": "T52",
+      "title": "Итоговая встреча по фазе 3",
+      "kind": "Общее",
+      "group": "Согласование",
+      "lead_preference": null,
+      "estimates": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "preferences": [
+        5,
+        5,
+        5
+      ],
+      "deliverable": "Протокол решения",
+      "depends": "T51"
+    },
+    {
+      "id": "T53",
+      "title": "Публикация подтверждённых файлов и обновление статусов",
+      "kind": "Индивидуальное",
+      "group": "Управление",
+      "lead_preference": 1,
+      "estimates": [
+        1,
+        2,
+        2
+      ],
+      "preferences": [
+        5,
+        3,
+        3
+      ],
+      "deliverable": "Версии, ссылки, журнал",
+      "depends": "T52"
+    }
+  ],
+  "meta_tasks": [
+    {
+      "id": "T16",
+      "title": "Стартовая встреча: закрепить требования фазы 3",
+      "kind": "Общее",
+      "lead": null,
+      "hours_by_person": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "deliverable": "Протокол T16"
+    },
+    {
+      "id": "T17",
+      "title": "Переосмысление WBS фазы 3 по утверждённым артефактам",
+      "kind": "Индивидуальное",
+      "lead": 1,
+      "hours_by_person": [
+        2,
+        0,
+        0
+      ],
+      "deliverable": "WBS T28–T53"
+    },
+    {
+      "id": "T18",
+      "title": "Проверка зависимостей, ролей и достаточности WBS",
+      "kind": "Индивидуальное",
+      "lead": 3,
+      "hours_by_person": [
+        0,
+        0,
+        1.5
+      ],
+      "deliverable": "Аудит WBS"
+    },
+    {
+      "id": "T19",
+      "title": "Независимая оценка трудоёмкости 26 задач",
+      "kind": "Общее",
+      "lead": null,
+      "hours_by_person": [
+        1.5,
+        1.5,
+        1.5
+      ],
+      "deliverable": "Три анкеты оценок времени"
+    },
+    {
+      "id": "T20",
+      "title": "Независимая оценка предпочтительности задач",
+      "kind": "Общее",
+      "lead": null,
+      "hours_by_person": [
+        0.75,
+        0.75,
+        0.75
+      ],
+      "deliverable": "Три анкеты предпочтений"
+    },
+    {
+      "id": "T21",
+      "title": "Определить допуски компетенций и ёмкость участников",
+      "kind": "Индивидуальное",
+      "lead": 3,
+      "hours_by_person": [
+        0,
+        0,
+        1.5
+      ],
+      "deliverable": "Ограничения модели"
+    },
+    {
+      "id": "T22",
+      "title": "Сформулировать целевую функцию и ограничения MILP",
+      "kind": "Индивидуальное",
+      "lead": 2,
+      "hours_by_person": [
+        0,
+        2.5,
+        0
+      ],
+      "deliverable": "Математическая постановка"
+    },
+    {
+      "id": "T23",
+      "title": "Решить MILP и сохранить решение, статусы, проверки",
+      "kind": "Индивидуальное",
+      "lead": 2,
+      "hours_by_person": [
+        0,
+        3,
+        0
+      ],
+      "deliverable": "Модель и выход оптимизатора"
+    },
+    {
+      "id": "T24",
+      "title": "Анализ чувствительности предпочтений и баланса",
+      "kind": "Индивидуальное",
+      "lead": 2,
+      "hours_by_person": [
+        0,
+        1.75,
+        0
+      ],
+      "deliverable": "Сценарии λ"
+    },
+    {
+      "id": "T25",
+      "title": "Обновить единую RACI и сквозной журнал",
+      "kind": "Индивидуальное",
+      "lead": 1,
+      "hours_by_person": [
+        1.75,
+        0,
+        0
+      ],
+      "deliverable": "RACI и журнал"
+    },
+    {
+      "id": "T26",
+      "title": "Подготовить и проверить отчёт фазы 2",
+      "kind": "Индивидуальное",
+      "lead": 1,
+      "hours_by_person": [
+        3,
+        0,
+        0
+      ],
+      "deliverable": "Отчёт фазы 2"
+    },
+    {
+      "id": "T27",
+      "title": "Итоговая встреча и архивирование материалов фазы 2",
+      "kind": "Общее",
+      "lead": null,
+      "hours_by_person": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "deliverable": "Протокол T27, ZIP"
+    }
+  ]
+}
