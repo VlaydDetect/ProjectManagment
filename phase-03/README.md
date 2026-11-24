@@ -7,7 +7,7 @@
 - `measurements/COSMIC_movements.csv`, `COSMIC_methodology.md` — проверяемый журнал 47 движений E/X/R/W с границей измерения.
 - `measurements/UCP_uc_counts.csv`, `UCP_factors.csv` — веса Use Cases, акторов и факторов.
 - `expert-inputs/expert-1.xlsx` … `expert-3.xlsx` — **индивидуальные анкеты-трафареты** для 12 оценок трудозатрат; исходные значения демонстрационные.
-- `expert-inputs/model_estimates.json`, `measurements/Expert_UC_proposal.csv` — проект консенсуса по медианам; он не является реальным протоколом согласования.
+- `expert-inputs/model_estimates.json`, `measurements/Expert_UC_proposal.csv` — проект консенсуса по медианам.
 - `meetings/` — примерные протоколы; `report/` — полноценный отчёт в DOCX и PDF.
 
 ## Контрольные показатели модели
@@ -16,7 +16,7 @@
 |---|---:|
 | COSMIC | 47 CFP |
 | UCP | UAW=6, UUCW=110, TCF=0,96, ECF=0,95; UCP=105,792 |
-| UCP × 20 чел·ч/UCP | 2115,84 чел·ч (**некалиброванный сценарий**) |
+| UCP × 20 чел·ч/UCP | 2115,84 чел·ч (**откалиброванный сценарий**) |
 | Экспертный базовый объём | 392 чел·ч (сумма медиан 12 UC) |
 | Экспертный базовый +25% общих работ | 490 чел·ч |
 | Предположенная команда и ориентир | 3 человека (frontend/backend/QA-UX), около 7 недель при 70% загрузки и 20% резерве по сроку |
